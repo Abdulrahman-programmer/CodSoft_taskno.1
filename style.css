@@ -1,0 +1,281 @@
+* {
+    height: 100%;
+    width: 100%;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body,
+html {
+    height: 100%;
+    width: 100%;
+    overflow: hidden;
+  
+}
+
+nav {
+    position: absolute;
+    display: grid;
+    grid-template-columns: 20% 40% 20% 20%;
+    grid-template-rows: 100%;
+    height: 10%;
+
+}
+
+#fake {
+    height: 10%;
+}
+
+#container {
+
+    display: flex;
+    align-items: center;
+    justify-items: center;
+    height: 100%;
+}
+
+#logoimg {
+    display: flex;
+    align-items: end;
+    justify-content: end;
+}
+
+nav img {
+    height: 50px;
+    width: 50px;
+}
+
+#logo {
+    padding-top: 11%;
+    font-size: 200%;
+    font-weight: bolder;
+    color: rgba(0, 0, 0, 0.869);
+    transition-property: color;
+    transition-duration: 1s;
+}
+
+#option ul {
+    list-style: none;
+    display: flex;
+    transform: translateY(50%);
+    color: rgba(0, 0, 0, 0.652);
+    transition-property: color;
+    transition-duration: 1s;
+}
+
+li {
+    margin-left: 10%;
+    transition-property: color;
+    transition-duration: 1s;
+}
+
+#singup {
+    color: aliceblue;
+    height: 60%;
+    width: 40%;
+    font-size: large;
+    border: 2px rgba(59, 193, 246, 0.774) solid;
+    border-radius: 15px;
+    background-color: rgba(59, 193, 246, 0.774);
+    margin-top: 8%;
+    margin-left: 15%;
+}
+
+#barmenu {
+    height: 50%;
+    width: 50%;
+    align-self: center;
+    justify-self: end;
+    margin-right: 15%;
+    display: none;
+
+}
+
+#menu {
+    position: absolute;
+    right: 0; /* Position the menu on the right */
+    top: 0;
+    height: 100%; /* Full height */
+    width: 0%; /* Start with 0 width */
+    background-color: rgba(59, 193, 246, 0.555);
+    opacity: 0; /* Start with opacity 0 */
+    transition: width 0.8s ease, opacity 0.8s ease, transform 0.8s ease; /* Smooth transition */
+    transform: translateX(100%); /* Slide in from right */
+}
+
+#menu.open {
+    width: 40%; /* When open, set the width to 40% */
+    opacity: 1;  /* Fully visible */
+    transform: translateX(0); /* Move it to the original position */
+}
+
+#wrap {
+    margin-top: 100px;
+}
+
+#wrap div {
+    font-size: larger;
+    color: rgb(255, 255, 255);
+    height: 5%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: 2px solid rgba(59, 193, 246, 0.724);
+}
+
+main {
+    display: flex;
+    height: 90%;
+    overflow: hidden;
+}
+
+#bord {
+    height: 50%;
+    padding-top: 8%;
+    padding-left: 6.5%;
+}
+
+#p1 {
+    margin-bottom: 5%;
+    height: 50%;
+    font-weight: bolder;
+    font-size: xx-large;
+    transition-property: color;
+    transition-duration: 1s;
+}
+
+#p2 {
+    height: 50%;
+    transition-property: color;
+    transition-duration: 1s;
+}
+
+#start {
+    padding-top: 1.5%;
+    text-align: center;
+    height: 50px;
+    width: 150px;
+    border-radius: 15px;
+    background-color: rgba(59, 193, 246, 0.774);
+    color: aliceblue;
+    font-size: larger;
+}
+
+#person {
+    transform: translate(15%, 10%);
+    height: 80%;
+    width: 75%;
+}
+
+#shape {
+    height: 50%;
+    width: 40%;
+    opacity: 25%;
+    transform: translate(-10%, -60%);
+}
+
+#icon {
+    background-color: rgba(0, 0, 0, 0.6);
+    height: 40px;
+    width: 40px;
+    transform: translate(260%, -1150%);
+    border-radius: 50%;
+}
+
+/* Circular background animation */
+#circle {
+    z-index: -1;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 0;
+    height: 0;
+    border-radius: 50%;
+    background-color: rgba(0, 0, 0, 0.800);
+    transition: width 1s ease-in-out, height 1s ease-in-out;
+    transform: translate(-50%, -50%);
+}
+
+.dark-mode #circle {
+    width: 250vmax;
+    height: 250vmax;
+}
+
+.dark-mode body {
+    background-color: black;
+    color: white;
+}
+
+
+@media only screen and (max-width: 600px) {
+    html{
+        overflow:hidden;
+    }
+    nav {
+        height: 10%;
+        width: 100%;
+    }
+
+    #barmenu {
+        display: block;
+    }
+
+    #logoimg img {
+        transform: translate(0, -35px);
+    }
+
+    #logo {
+        padding-top: 29%;
+    }
+
+    #option {
+        display: none;
+    }
+
+    div button {
+        display: none;
+    }
+
+    main {
+        display: contents;
+    }
+
+    body {
+        overflow: hidden;
+    }
+
+    #shape {
+        transform: none;
+    }
+
+    #person img {
+        width: 100%;
+        height: auto;
+    }
+
+    #bord {
+        height: 30%;
+    }
+
+    #person {
+        margin-top: 50px;
+        height: 40%;
+    }
+
+    #shape {
+        width: 80%;
+        height: 30%;
+    }
+
+
+    #icon {
+
+        transform: translate(200%, -500%)
+    }
+
+    #start {
+        padding-top: 2.8%;
+    }
+    
+}
